@@ -36,8 +36,8 @@ const ProductsComp = ({cat, filters, sort}) => {
       try{
         const res = await axios.get(
           cat
-            ? `http://localhost:5000/api/products?categories=${cat}`
-            : "http://localhost:5000/api/products"
+            ? `https://ecommerce-app-api.onrender.com/api/products?categories=${cat}`
+            : "https://ecommerce-app-api.onrender.com/api/products"
         );
         setProducts(res.data);
       }catch(err){
